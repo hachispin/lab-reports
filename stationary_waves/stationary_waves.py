@@ -57,3 +57,11 @@ plt.margins(0)  # Removing margins as per Mr. Awuah.
 
 # Show the plot.
 plt.show()
+
+# Expected output:
+#
+# Plotting points: ((0.3, 250.0), (0.4, 200.0), (0.5, 166.7), (0.6, 125.0), (0.7, 111.1), (0.8, 83.33))
+# LOBF gradient (m): -326.2142857142857
+# LOBF y-intercept (c): 335.43952380952385
+# LOBF equation: y = -326.214x + 335.440
+#
