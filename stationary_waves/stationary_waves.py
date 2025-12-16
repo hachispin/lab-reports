@@ -53,7 +53,7 @@ plt.scatter(x_values, y_values, marker="x", color="Black")
 plt.plot(lobf_x_values, lobf)
 
 plt.grid()  # Set grid (stylistic choice).
-plt.margins(0)  # Removing margins as per Mr. Awuah.
+plt.margins(x=0)  # Removing margins as per Mr. Awuah.
 
 # Show the plot.
 plt.show()
