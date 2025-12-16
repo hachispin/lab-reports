@@ -44,13 +44,11 @@ print(f"LOBF equation: y = {lobf_m:.3f}x + {lobf_c:.3f}")
 # I've done this so the points (marked with crosses)
 # don't get cut off when margins are set to zero.
 MARGIN = 0.05
-lobf_x = np.array((
-    min(reciprocal_length) - MARGIN,
-    max(reciprocal_length) + MARGIN
-))
+lobf_start = min(reciprocal_length) - MARGIN
+lobf_end = max(reciprocal_length) + MARGIN
 
-# Linear equation: y = mx + c
-lobf_y = lobf_m * lobf_x + lobf_c
+lobf_x = np.array((lobf_start, lobf_end))
+lobf_y = lobf_m * lobf_x + lobf_c  # y = mx + c
 
 # Setup plotting
 A4_SIZE = (11.69, 8.27)  # (x, y)
@@ -58,11 +56,9 @@ FIGURE_NAME = "Stationary_Waves.png"
 plt.figure(figsize=A4_SIZE)
 
 # Set appropriate labels
-plt.xlabel(r"Length, 1/L $(m^{-1})$")
+plt.xlabel("Length, 1/L (m⁻¹)")
 plt.ylabel("Frequency, f (Hz)")
-plt.title(
-    "Investigating how the frequency of the first harmonic changes with length"
-)
+plt.title("Investigating how the frequency of the first harmonic changes with length")
 
 # Plot `points` and `lobf`.
 plt.scatter(reciprocal_length, frequency, marker="x", color="Black")
