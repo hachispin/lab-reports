@@ -43,6 +43,11 @@ lobf_x_values = np.array((min(x_values) - MARGIN, max(x_values) + MARGIN))
 # Linear equation: y = mx + c
 lobf = lobf_m * lobf_x_values + lobf_c
 
+# Setup plotting
+A4_SIZE = (11.69, 8.27)  # (x, y)
+FIGURE_NAME = "Stationary_Waves.png"
+plt.figure(figsize=A4_SIZE)
+
 # Set appropriate labels
 plt.title("Investigating how the frequency of the first harmonic changes with length")
 plt.xlabel("Length (m)")
@@ -54,9 +59,7 @@ plt.plot(lobf_x_values, lobf)
 
 plt.grid()  # Set grid (stylistic choice).
 plt.margins(x=0)  # Removing margins as per Mr. Awuah.
-
-# Show the plot.
-plt.show()
+plt.savefig(FIGURE_NAME)
 
 # Expected output:
 #
